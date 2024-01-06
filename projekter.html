@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/svg/logo.svg" alt="Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">hjem</a></li>
+          <li><a href="#">projekter</a></li>
+          <li><a href="#">om mig</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="carousel">
+        <div class="slides">
+          <div class="slide">
+            <img src="img/buildings_sing.webp" alt="Image 1" />
+            <div class="caption">Caption for Image 1</div>
+          </div>
+          <div class="slide">
+            <img src="img/itaewon.webp" alt="Image 2" />
+            <div class="caption">Caption for Image 2</div>
+          </div>
+          <div class="slide">
+            <img src="img/jejuhabour.webp" alt="Image 3" />
+            <div class="caption">Caption for Image 3</div>
+          </div>
+          <div class="slide">
+            <img src="img/stryno.webp" alt="Image 4" />
+            <div class="caption">Caption for Image 3</div>
+          </div>
+          <div class="slide">
+            <img src="img/uluru.webp" alt="Image 5" />
+            <div class="caption">Caption for Image 3</div>
+          </div>
+          <!-- Add more slides as needed -->
+        </div>
+        <button class="prevBtn" onclick="prevSlide()">Previous</button>
+        <button class="nextBtn" onclick="nextSlide()">Next</button>
+        <div class="text-container">
+          <p class="text"></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="logo">
+        <a href="index.html"><img src="img/svg/logo.svg" alt="logo" /></a>
+      </div>
+
+      <div id="conf2_3">
+        <a href="https://www.instagram.com/mariewulff_/">
+          <img class="logo1" src="img/svg/ig.svg" alt="instagram"
+        /></a>
+        <a href="https://www.facebook.com/marie3wulff/">
+          <img class="logo1" src="img/svg/fb.svg" alt="facebook"
+        /></a>
+        <a href="www.linkedin.com/in/marie-wulff"
+          ><img class="logo1" src="img/svg/li.svg" alt="linked in"
+        /></a>
+      </div>
+
+      <div id="conf_3_1">
+        <img class="logo1" src="img/svg/ep_arrow-up-bold.svg" alt="arrow" />
+      </div>
+    </footer>
+  </body>
+</html>
