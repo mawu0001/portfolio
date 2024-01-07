@@ -16,35 +16,26 @@ links.forEach((link) => {
 });
 
 let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
 
-function showSlides() {
-  const slides = document.querySelectorAll(".slide");
-  const captions = document.querySelectorAll(".caption");
-  const text = document.querySelector(".text");
-
+function showSlide(index) {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    captions[i].style.display = "none";
   }
 
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  captions[slideIndex - 1].style.display = "block";
-
-  // Change text according to the current slide's caption
-  text.textContent = captions[slideIndex - 1].textContent;
+  slides[index].style.display = "block";
 }
 
 function prevSlide() {
-  slideIndex--;
-  showSlides();
+  slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+  showSlide(slideIndex);
 }
 
 function nextSlide() {
-  slideIndex++;
-  showSlides();
+  slideIndex = (slideIndex + 1) % totalSlides;
+  showSlide(slideIndex);
 }
+
+// Show the first slide initially
+showSlide(slideIndex);
